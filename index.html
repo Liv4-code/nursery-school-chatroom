@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Live Chatroom</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBDIMG2s0zUXDRj7GCtIa9vCGoWDKK9ICI",
+                authDomain: "modern-js-be787.firebaseapp.com",
+                projectId: "modern-js-be787",
+                storageBucket: "modern-js-be787.appspot.com",
+                messagingSenderId: "903871643430",
+                appId: "1:903871643430:web:6166b242d5d2b2e1174be7",
+                measurementId: "G-QMEJP1WLBX",
+            };
+
+            // Init Firebase
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+        </script>
+
+        <script src="index.js"></script>
+    </body>
+</html>
