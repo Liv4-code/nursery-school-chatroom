@@ -1,0 +1,19 @@
+.container {
+    max-width: 700px;
+}
+
+.btn {
+    background-color: rgb(125, 58, 131);
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:hover {
+    background-color: rgb(142, 77, 148);
+    color: white;
+}
+
+.btn:focus {
+    outline: none !important;
+}
