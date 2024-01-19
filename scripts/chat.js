@@ -42,24 +42,8 @@ class Chatroom {
     }
     updateRoom(room) {
         this.room = room;
-        console.log("room changed");
         if (this.unsub) {
             this.unsub();
         }
     }
 }
-
-const chatroom = new Chatroom("education", "suzy");
-
-chatroom.getChats((data) => {
-    console.log(data);
-});
-
-setTimeout(() => {
-    chatroom.updateRoom("meals");
-    chatroom.updateName("lesli");
-    chatroom.getChats((data) => {
-        console.log(data);
-    });
-    chatroom.addChat("hey everybody :)");
-}, 3000);
