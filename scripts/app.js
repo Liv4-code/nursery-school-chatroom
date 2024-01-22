@@ -1,6 +1,21 @@
 // DOM queries
 const chatList = document.querySelector(".chat-list");
 const newChatForm = document.querySelector(".new-chat");
+const newNameForm = document.querySelector(".new-name");
+const updateMsg = document.querySelector(".update-msg");
+
+// adding new name
+newNameForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const newName = newNameForm.name.value.trim();
+    // updating name using Chatroom class
+    chatroom.updateName(newName);
+    // clear input field
+    newNameForm.reset();
+    // display updated name message
+    updateMsg.innerText = `Your name was updated to ${newName}`;
+    setTimeout(() => (updateMsg.innerText = ""), 3000);
+});
 
 // adding a new chat
 newChatForm.addEventListener("submit", (e) => {
@@ -13,8 +28,11 @@ newChatForm.addEventListener("submit", (e) => {
         .catch((err) => console.log(err));
 });
 
+// check local storage for a name
+const username = localStorage.username ? localStorage.username : "anonymous";
+
 // class instances
-const chatroom = new Chatroom("education", "suzy");
+const chatroom = new Chatroom("education", username);
 const chatui = new ChatUI(chatList);
 
 // get chats & render
