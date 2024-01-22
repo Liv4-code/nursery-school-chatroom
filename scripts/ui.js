@@ -19,6 +19,8 @@ class ChatUI {
 
         this.list.innerHTML += html;
     }
-}
 
-// clear list of chats when room changes
+    clear() {
+        this.list.innerHTML = "";
+    }
+}
